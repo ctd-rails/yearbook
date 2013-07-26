@@ -1,3 +1,10 @@
 <h1>CTD Rails 2013</h1>
 
-<%= @ruby_response %>
+<ul>
+<% @students.each do |student_hash| %>
+  <li>
+    <%= student_hash["first_name"] %>
+    <%= student_hash["last_name"] %>
+  </li>
+<% end %>
+</ul>

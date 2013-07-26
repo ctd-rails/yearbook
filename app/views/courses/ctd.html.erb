@@ -1,11 +1,13 @@
 <h1>CTD Rails 2013</h1>
 
-<ul>
-<% @students.each do |student_hash| %>
-  <li>
-    <%= student_hash["first_name"] %>
-    <%= student_hash["last_name"] %>
-    <img src="<%= student_hash['profile_pic_url'] %>" alt="">
-  </li>
-<% end %>
-</ul>
+<div class="container">
+  <ul class="thumbnails">
+    <% @students.each do |student_hash| %>
+    <li class="span4">
+      <a href="#" class="thumbnail">
+        <img src="<%= student_hash['profile_pic_url'] %>" alt="">
+      </a>
+    </li>
+    <% end %>
+  </ul>
+</div>
